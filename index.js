@@ -185,16 +185,16 @@ function createElements(arr){
     tbody.innerHTML = "";
     arr.forEach(element => {
         let tr = document.createElement("tr");
-            tr.innerHTML = `<td>${arr.indexOf(element) + 1}</td>
-                            <td>${element.myTitle}</td>
-                            <td>${element.myPrice}</td>
-                            <td>${element.myTaxes}</td>
-                            <td>${element.myAds}</td>
-                            <td>${element.myDiscount}</td>
-                            <td>${element.myTotal}</td>
-                            <td>${element.myCategory}</td>
-                            <td><button id="update">Update</button></td>
-                            <td><button id="delete">Delete</button></td>`;
+            tr.innerHTML = `<td data-cell="id">${arr.indexOf(element) + 1}</td>
+                            <td data-cell="title">${element.myTitle}</td>
+                            <td data-cell="price">${element.myPrice}</td>
+                            <td data-cell="taxes">${element.myTaxes}</td>
+                            <td data-cell="ads">${element.myAds}</td>
+                            <td data-cell="discount">${element.myDiscount}</td>
+                            <td data-cell="total">${element.myTotal}</td>
+                            <td data-cell="category">${element.myCategory}</td>
+                            <td data-cell="update"><button id="update">Update</button></td>
+                            <td data-cell="delete"><button id="delete">Delete</button></td>`;
                             tbody.append(tr);
     });
 }
